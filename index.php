@@ -56,10 +56,14 @@
 error_reporting(E_ALL ^ E_DEPRECATED);
 // read
 
-$item = htmlspecialchars($_POST["item"]);
-$location = $_POST['location'];
-$category= $_POST['category'];
-$remove= htmlspecialchars($_GET["remove"]);
+	    
+	    
+//$item = htmlspecialchars($_POST["item"]);
+$item = isset($_POST["item"]) ? $_POST["item"] : "";
+$location = isset($_POST["location"]) ? $_POST["location"] : "";
+$category = isset($_POST["category"]) ? $_POST["category"] : "";
+$remove = isset($_GET["remove"]) ? $_GET["remove"] : "";	    
+//$remove= htmlspecialchars($_GET["remove"]);
 
 // Connecting, selecting database
 
@@ -71,8 +75,16 @@ define( "DB_DATABASE",  getenv('OPENSHIFT_APP_NAME') );
 //mysql_connect(DB_SERVER,DB_USER,DB_PASSWORD) or die(mysql_error());
 //mysql_select_db(DB_DATABASE) or die(mysql_error());
 
-mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE);
+//mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE);
 
+$link = mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE);
+
+if (!$link) {
+    echo "Error: Unable to connect to MySQL." . PHP_EOL;
+    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+    exit;
+}	    
+	    	    
 $query = mysqli_query("select 1 from items");
 if($query == FALSE) {
   $query = "CREATE TABLE items (id INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(id), item VARCHAR(100), category INT)";
