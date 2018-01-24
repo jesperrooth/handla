@@ -76,7 +76,11 @@ define( "DB_SERVER",    getenv('MYSQL_DB_HOST') );
 define( "DB_USER",      getenv('MYSQL_USER') );
 define( "DB_PASSWORD",  getenv('MYSQL_PASSWORD') );
 define( "DB_DATABASE",  getenv('MYSQL_DATABASE') );
-	    
+
+	    echo $DB_SERVER;
+	    echo $DB_USER;
+	    echo $DB_PASSWORD;
+	    echo $DB_DATABASE;
 	    
 
 //mysql_connect(DB_SERVER,DB_USER,DB_PASSWORD) or die(mysql_error());
