@@ -67,10 +67,17 @@ $remove = isset($_GET["remove"]) ? $_GET["remove"] : "";
 
 // Connecting, selecting database
 
-define( "DB_SERVER",    getenv('OPENSHIFT_MYSQL_DB_HOST') );
-define( "DB_USER",      getenv('OPENSHIFT_MYSQL_DB_USERNAME') );
-define( "DB_PASSWORD",  getenv('OPENSHIFT_MYSQL_DB_PASSWORD') );
-define( "DB_DATABASE",  getenv('OPENSHIFT_APP_NAME') );
+// define( "DB_SERVER",    getenv('OPENSHIFT_MYSQL_DB_HOST') );
+// define( "DB_USER",      getenv('OPENSHIFT_MYSQL_DB_USERNAME') );
+// define( "DB_PASSWORD",  getenv('OPENSHIFT_MYSQL_DB_PASSWORD') );
+// define( "DB_DATABASE",  getenv('OPENSHIFT_APP_NAME') );
+
+define( "DB_SERVER",    getenv('MYSQL_DB_HOST') );
+define( "DB_USER",      getenv('MYSQL_USER') );
+define( "DB_PASSWORD",  getenv('MYSQL_PASSWORD') );
+define( "DB_DATABASE",  getenv('MYSQL_DATABASE') );
+	    
+	    
 
 //mysql_connect(DB_SERVER,DB_USER,DB_PASSWORD) or die(mysql_error());
 //mysql_select_db(DB_DATABASE) or die(mysql_error());
