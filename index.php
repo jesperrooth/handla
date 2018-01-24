@@ -68,33 +68,33 @@ define( "DB_USER",      getenv('OPENSHIFT_MYSQL_DB_USERNAME') );
 define( "DB_PASSWORD",  getenv('OPENSHIFT_MYSQL_DB_PASSWORD') );
 define( "DB_DATABASE",  getenv('OPENSHIFT_APP_NAME') );
 
-mysql_connect(DB_SERVER,DB_USER,DB_PASSWORD) or die(mysql_error());
-mysql_select_db(DB_DATABASE) or die(mysql_error());
+//mysql_connect(DB_SERVER,DB_USER,DB_PASSWORD) or die(mysql_error());
+//mysql_select_db(DB_DATABASE) or die(mysql_error());
 
-//mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE);
+mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE);
 
-$query = mysql_query("select 1 from items");
+$query = mysqli_query("select 1 from items");
 if($query == FALSE) {
   $query = "CREATE TABLE items (id INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(id), item VARCHAR(100), category INT)";
-  $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+  $result = mysqli_query($query) or die('Query failed: ' . mysql_error());
 }
 
 // Add new item if any
 if ( $item != "" ) {
   $query = "INSERT INTO items VALUES ('','$item','$category')";
-  $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+  $result = mysqli_query($query) or die('Query failed: ' . mysql_error());
 }
 
 // Remove any items if needed
 if ( $remove != "" ) {
   $query = "DELETE from items WHERE id=$remove";
-  $result = mysql_query($query) or die('Query failed: ' . mysql_error());
+  $result = mysqli_query($query) or die('Query failed: ' . mysql_error());
 }
    
 
 // List items in shopping list
 $query = "SELECT id, item, category FROM items ORDER BY category";
-$result = mysql_query($query) or die('Query failed: ' . mysql_error());
+$result = mysqli_query($query) or die('Query failed: ' . mysql_error());
 
 echo "<br>";
 echo "<fieldset>";
@@ -108,9 +108,9 @@ while ($line = mysql_fetch_array($result, MYSQL_ASSOC))
 echo "</fieldset>";
 
 // Free resultset
-mysql_free_result($result);
+mysqli_free_result($result);
 // Closing connection
-mysql_close($link);
+mysqli_close($link);
 
 ?>
 
