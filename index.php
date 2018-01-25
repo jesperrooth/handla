@@ -67,34 +67,19 @@ $remove = isset($_GET["remove"]) ? $_GET["remove"] : "";
 
 // Connecting, selecting database
 
-// define( "DB_SERVER",    getenv('OPENSHIFT_MYSQL_DB_HOST') );
-// define( "DB_USER",      getenv('OPENSHIFT_MYSQL_DB_USERNAME') );
-// define( "DB_PASSWORD",  getenv('OPENSHIFT_MYSQL_DB_PASSWORD') );
-// define( "DB_DATABASE",  getenv('OPENSHIFT_APP_NAME') );
-
-define( "DB_SERVER",    getenv('MYSQL_DB_HOST') );
-define( "DB_USER",      getenv('MYSQL_USER') );
-define( "DB_PASSWORD",  getenv('MYSQL_PASSWORD') );
-define( "DB_DATABASE",  getenv('MYSQL_DATABASE') );
-
-	    echo $DB_SERVER;
-	    echo $DB_USER;
-	    echo $DB_PASSWORD;
-	    echo $DB_DATABASE;
+$dbhost = getenv("MYSQL_SERVICE_HOST");
+$dbport = getenv("MYSQL_SERVICE_PORT");
+$dbuser = getenv("databaseuser");
+$dbpwd = getenv("databasepassword");
+$dbname = getenv("databasename");
+$connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+if ($connection->connect_errno) {
+    printf("Connect failed: %s\n", $mysqli->connect_error);
+    exit();
+} else {
+    printf("Connected to the database");
+}
 	    
-
-//mysql_connect(DB_SERVER,DB_USER,DB_PASSWORD) or die(mysql_error());
-//mysql_select_db(DB_DATABASE) or die(mysql_error());
-
-//mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE);
-
-$link = mysqli_connect(DB_SERVER,DB_USER,DB_PASSWORD,DB_DATABASE);
-
-if (!$link) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    exit;
-}	    
 	    	    
 $query = mysqli_query("select 1 from items");
 if($query == FALSE) {
