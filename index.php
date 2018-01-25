@@ -69,9 +69,9 @@ $remove = isset($_GET["remove"]) ? $_GET["remove"] : "";
 
 $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("MYSQL_USER");
-$dbpwd = getenv("MYSQL_PASSWORD");
-$dbname = getenv("MYSQL_DATABASE");
+$dbuser = "user0O1";
+$dbpwd = "BTJQ1j01B4egRhMX";
+$dbname = "handla";
 $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
