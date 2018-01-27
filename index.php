@@ -87,10 +87,22 @@ if ($connection->connect_errno) {
 //  $result = mysqli_query($query) or die('Query failed: ' . mysql_error());
 //}
 	    
-/* Create table doesn't return a resultset */
-if ($mysqli->query("CREATE TABLE items (id INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(id), item VARCHAR(100), category INT)") === TRUE) {
-    printf("Table items successfully created.\n");
-}	    
+
+// Attempt create table query execution
+$sql = "CREATE TABLE items(
+    id INT NOT NULL AUTO_INCREMENT,
+    PRIMARY KEY(id),
+    item VARCHAR(100),
+    category INT
+)";
+if(mysqli_query($link, $sql)){
+    echo "Table created successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+	    
+	    
+	    
 
 // Add new item if any
 if ( $item != "" ) {
