@@ -77,25 +77,17 @@ if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 } else {
-    printf("Connected to the database");
+    printf("Cönnected to the database");
 }
 	    
-	    	    
-//$query = mysqli_query("select 1 from items");
-//if($query == FALSE) {
-//  $query = "CREATE TABLE items (id INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(id), item VARCHAR(100), category INT)";
-//  $result = mysqli_query($query) or die('Query failed: ' . mysql_error());
-//}
-	    
-
-// Attempt create table query execution
+// Create the empty table if it does not exist already	    
 $sql = "CREATE TABLE items(
     id INT NOT NULL AUTO_INCREMENT,
     PRIMARY KEY(id),
     item VARCHAR(100),
     category INT
 )";
-if(mysqli_query($link, $sql)){
+if(mysqli_query($connection, $sql)){
     echo "Table created successfully.";
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
@@ -107,19 +99,19 @@ if(mysqli_query($link, $sql)){
 // Add new item if any
 if ( $item != "" ) {
   $query = "INSERT INTO items VALUES ('','$item','$category')";
-  $result = mysqli_query($query) or die('Query failed: ' . mysql_error());
+  $result = mysqli_query($connection, $query) or die('Query failed: ' . mysql_error());
 }
 
 // Remove any items if needed
 if ( $remove != "" ) {
   $query = "DELETE from items WHERE id=$remove";
-  $result = mysqli_query($query) or die('Query failed: ' . mysql_error());
+  $result = mysqli_query($connection, $query) or die('Query failed: ' . mysql_error());
 }
    
 
 // List items in shopping list
 $query = "SELECT id, item, category FROM items ORDER BY category";
-$result = mysqli_query($query) or die('Query failed: ' . mysql_error());
+$result = mysqli_query($connection, $query) or die('Query failed: ' . mysql_error());
 
 echo "<br>";
 echo "<fieldset>";
