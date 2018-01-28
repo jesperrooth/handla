@@ -80,18 +80,10 @@ if ($connection->connect_errno) {
     printf("Cönnected to the database");
 }
 	    
-// Create the empty table if it does not exist already	    
-$sql = "CREATE TABLE items(
-    id INT NOT NULL AUTO_INCREMENT,
-    PRIMARY KEY(id),
-    item VARCHAR(100),
-    category INT
-)";
-if(mysqli_query($connection, $sql)){
-    echo "Table created successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
+// Create the empty table if it does not exist already	        
+mysqli_query($connection,"CREATE TABLE items(id INT NOT NULL AUTO_INCREMENT,PRIMARY KEY(id),item VARCHAR(100),category INT");	    
+	    
+
 	    
 	    
 	    
