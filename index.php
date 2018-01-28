@@ -64,12 +64,6 @@ $location = isset($_POST["location"]) ? $_POST["location"] : "";
 $category = isset($_POST["category"]) ? $_POST["category"] : "";
 $remove = isset($_GET["remove"]) ? $_GET["remove"] : "";	    
 //$remove= htmlspecialchars($_GET["remove"]);
-	    
-echo $item;
-echo $location;
-	    echo $category;
-	    echo $remove;
-
 // Connecting, selecting database
 
 $dbhost = getenv("MYSQL_SERVICE_HOST");
@@ -77,6 +71,7 @@ $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = "user0O1";
 $dbpwd = "BTJQ1j01B4egRhMX";
 $dbname = "handla";
+	    
 $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
@@ -97,10 +92,8 @@ mysqli_query($connection,"CREATE TABLE items(id INT NOT NULL AUTO_INCREMENT,PRIM
 	    
 // Add new item if any
 if ( $item != "" ) {
-  $query = "INSERT INTO items VALUES ('','$item','$category')";
+  $query = "INSERT INTO items (item,category) VALUES ('$item','$category')";
   mysqli_query($connection, $query);
-	mysqli_query($connection, "INSERT INTO items VALUES ('','$item','$category')");
-  echo "added $item";
 }
 
 // Remove any items if needed
