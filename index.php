@@ -82,16 +82,18 @@ if ($connection->connect_errno) {
 	    
 // Create the empty table if it does not exist already	        
 mysqli_query($connection,"CREATE TABLE items(id INT NOT NULL AUTO_INCREMENT,PRIMARY KEY(id),item VARCHAR(100),category INT");	    
-	    
+	       
 
+// Add new item if any
+//if ( $item != "" ) {
+//  $query = "INSERT INTO items VALUES ('','$item','$category')";
+//  $result = mysqli_query($connection, $query) or die('Query failed: ' . mysql_error());
+//}
 	    
-	    
-	    
-
 // Add new item if any
 if ( $item != "" ) {
   $query = "INSERT INTO items VALUES ('','$item','$category')";
-  $result = mysqli_query($connection, $query) or die('Query failed: ' . mysql_error());
+  mysqli_query($connection, $query);
 }
 
 // Remove any items if needed
@@ -102,12 +104,14 @@ if ( $remove != "" ) {
    
 
 // List items in shopping list
-$query = "SELECT id, item, category FROM items ORDER BY category";
-$result = mysqli_query($connection, $query) or die('Query failed: ' . mysql_error());
+//$query = "SELECT id, item, category FROM items ORDER BY category";
+//$result = mysqli_query($connection, $query) or die('Query failed: ' . mysql_error());
 
+$result = mysqli_query($connection, "SELECT id, item, category FROM items ORDER BY category");
+	    
 echo "<br>";
 echo "<fieldset>";
-while ($line = mysql_fetch_array($result, MYSQL_ASSOC))
+while ($line = mysql_fetch_array($result->fetch_array))
 {
   echo "<div class=\"row\">";
   echo "<label>$line[item]</label>";
