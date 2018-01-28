@@ -128,7 +128,8 @@ echo "</fieldset>";
 // Free resultset
 mysqli_free_result($result);
 // Closing connection
-mysqli_close($link);
+mysqli_close($connection);
+	    
 
 ?>
 
