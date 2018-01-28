@@ -64,6 +64,11 @@ $location = isset($_POST["location"]) ? $_POST["location"] : "";
 $category = isset($_POST["category"]) ? $_POST["category"] : "";
 $remove = isset($_GET["remove"]) ? $_GET["remove"] : "";	    
 //$remove= htmlspecialchars($_GET["remove"]);
+	    
+echo $item;
+echo $location;
+	    echo $category;
+	    echo $remove;
 
 // Connecting, selecting database
 
@@ -111,7 +116,7 @@ $result = mysqli_query($connection, "SELECT id, item, category FROM items ORDER 
 	    
 echo "<br>";
 echo "<fieldset>";
-while ($line = mysqli_fetch_array($result->MYSQLI_ASSOC))	
+while ($line = mysqli_fetch_array($result->MYSQLI_NUM))	
 {
   echo "<div class=\"row\">";
   echo "<label>$line[item]</label>";
