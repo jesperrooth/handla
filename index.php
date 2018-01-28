@@ -84,11 +84,6 @@ if ($connection->connect_errno) {
 mysqli_query($connection,"CREATE TABLE items(id INT NOT NULL AUTO_INCREMENT,PRIMARY KEY(id),item VARCHAR(100),category INT");	    
 	       
 
-// Add new item if any
-//if ( $item != "" ) {
-//  $query = "INSERT INTO items VALUES ('','$item','$category')";
-//  $result = mysqli_query($connection, $query) or die('Query failed: ' . mysql_error());
-//}
 	    
 // Add new item if any
 if ( $item != "" ) {
@@ -114,7 +109,8 @@ echo "<fieldset>";
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))	
 {
   echo "<div class=\"row\">";
-  echo "<label>$line[item] bread</label>";
+  echo "$line[item]";
+  // echo "<label>$line[item] bread</label>";
   echo "<a class=\"button$line[category]\" href=\"index.php?remove=$line[id]\"></a>";
   echo "</div>";
 }
