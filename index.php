@@ -99,6 +99,8 @@ mysqli_query($connection,"CREATE TABLE items(id INT NOT NULL AUTO_INCREMENT,PRIM
 if ( $item != "" ) {
   $query = "INSERT INTO items VALUES ('','$item','$category')";
   mysqli_query($connection, $query);
+	mysqli_query($connection, "INSERT INTO items VALUES ('','$item','$category')");
+  echo "added $item";
 }
 
 // Remove any items if needed
