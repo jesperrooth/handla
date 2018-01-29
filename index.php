@@ -109,8 +109,7 @@ echo "<fieldset>";
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))	
 {
   echo "<div class=\"row\">";
-  echo "$line[item]";
-  // echo "<label>$line[item] bread</label>";
+  echo "<label>$line[item]</label>";
   echo "<a class=\"button$line[category]\" href=\"index.php?remove=$line[id]\"></a>";
   echo "</div>";
 }
