@@ -7,13 +7,13 @@
   <title>Handla</title>
   <meta name="viewport" content="width=devicewidth; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
   <link rel="apple-touch-icon" href="iui/iui-logo-touch-icon.png" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="no" />
   <link rel="stylesheet" href="iui/iui.css" type="text/css" />
 
   <link rel="stylesheet" title="Default" href="iui/t/default/default-theme.css"  type="text/css"/>
   <script type="application/x-javascript" src="iui/iui.js"></script>
   <script type="text/javascript">
-    iui.animOn = true;
+    iui.animOn = false;
   </script>
 </head>
 
@@ -109,7 +109,7 @@ echo "<fieldset>";
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))	
 {
   echo "<div class=\"row\">";
-  echo "<label><h3>$line[item]</h3></label>";
+  echo "<label>$line[item]</label>";
   echo "<a class=\"button$line[category]\" href=\"index.php?remove=$line[id]\"></a>";
   echo "</div>";
 }
