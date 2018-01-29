@@ -32,7 +32,7 @@
             </div>
 
 	    <div class="row">
-		<label for="category">Kategori</label>
+		<label<Kategori</label>
 		<select id="category" name="category" class="panel">
 		<option value="1">Grönt</option>
 		<option value="2">Kött</option>
