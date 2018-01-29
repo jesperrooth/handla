@@ -32,7 +32,7 @@
             </div>
 
 	    <div class="row">
-		<label<Kategori</label>
+		<label for="category">Kategori</label>
 		<select id="category" name="category" class="panel">
 		<option value="1">Grönt</option>
 		<option value="2">Kött</option>
@@ -109,7 +109,7 @@ echo "<fieldset>";
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))	
 {
   echo "<div class=\"row\">";
-  echo "<label>$line[item]</label>";
+  echo "<label><h3>$line[item]</h3></label>";
   echo "<a class=\"button$line[category]\" href=\"index.php?remove=$line[id]\"></a>";
   echo "</div>";
 }
