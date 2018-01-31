@@ -490,9 +490,9 @@ body > .dialog {
 }
 
 .dialog > fieldset > label {
-    position: absolute;
+    position: left;
     margin: 16px 0 0 6px;
-    font-size: 14px;
+    font-size: 20px;
     color: #999999;
 }
 
