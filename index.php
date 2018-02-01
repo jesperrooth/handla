@@ -27,8 +27,8 @@
         <fieldset>
 
             <div class="row">
-                <label>Artikel</label>
-                <input type="text" name="item" value=""/>
+                <label>Artikel
+                <input type="text" name="item" value=""/></label>
             </div>
 
 	    <div class="row">
