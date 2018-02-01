@@ -77,7 +77,7 @@ if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 } else {
-    printf("Cönnected to the database");
+    echo "<br>";
 }
 	    
 // Create the empty table if it does not exist already	        
