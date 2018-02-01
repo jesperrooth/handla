@@ -108,7 +108,7 @@ echo "<br>";
 echo "<fieldset>";
 echo "<br>";
 echo "<div id=\"index\" title=\"Index\" selected=\"true\">";
-echo "Hello World"
+echo "Hello World";
 echo "</div>";
 	    
 	    
