@@ -103,6 +103,260 @@ body.landscape > .toolbar > h1 {
     background: none;
 }
 
+.button1 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(1button.png) 0 5 0 5;
+}
+
+.button2 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(2button.png) 0 5 0 5;
+}
+
+.button3 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(3button.png) 0 5 0 5;
+}
+
+.button4 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(4button.png) 0 5 0 5;
+}
+
+.button5 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(5button.png) 0 5 0 5;
+}
+
+.button6 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(6button.png) 0 5 0 5;
+}
+
+.button7 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(7button.png) 0 5 0 5;
+}
+
+.button8 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(8button.png) 0 5 0 5;
+}
+
+.button9 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(9button.png) 0 5 0 5;
+}
+
+.button10 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(10button.png) 0 5 0 5;
+}
+
+.button11 {
+    position: absolute;
+    overflow: hidden;
+    top: 4px;
+    right: 5px;
+    margin: 0;
+    border-width: 0 5px;
+    padding: 0 3px;
+    width: 24px;
+    height: 34px;
+    line-height: 34px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    text-overflow: ellipsis;
+    text-decoration: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-border-image: url(6button.png) 0 5 0 5;
+}
+
+
 .blueButton {
     border-width: 0 5px;
 }
