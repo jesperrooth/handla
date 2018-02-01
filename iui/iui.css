@@ -1,13 +1,13 @@
 /*
-   Copyright (c) 2007-9, iUI Project Members
+   Copyright (c) 2007-14, iUI Project Members
    See LICENSE.txt for licensing terms
-   Version 0.40-dev2
+   Version 0.4.1
  */
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Helvetica;
     background: #FFFFFF;
-    color: #777777;
+    color: #000000;
     overflow-x: hidden;
     -webkit-user-select: none;
     -webkit-text-size-adjust: none;
@@ -28,7 +28,7 @@ body > *:not(.toolbar) {
     -webkit-transform: translateX(0%);
 }
 
-body[orient="landscape"] > *:not(.toolbar) {
+body.landscape > *:not(.toolbar) {
     height: auto;
     min-height: 268px;
 }
@@ -76,7 +76,7 @@ body > .toolbar {
     color: #FFFFFF;
 }
 
-body[orient="landscape"] > .toolbar > h1 {
+body.landscape > .toolbar > h1 {
     margin-left: -125px;
     width: 250px;
 }
@@ -102,260 +102,6 @@ body[orient="landscape"] > .toolbar > h1 {
     white-space: nowrap;
     background: none;
 }
-
-.button1 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(1button.png) 0 5 0 5;
-}
-
-.button2 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(2button.png) 0 5 0 5;
-}
-
-.button3 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(3button.png) 0 5 0 5;
-}
-
-.button4 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(4button.png) 0 5 0 5;
-}
-
-.button5 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(5button.png) 0 5 0 5;
-}
-
-.button6 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(6button.png) 0 5 0 5;
-}
-
-.button7 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(7button.png) 0 5 0 5;
-}
-
-.button8 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(8button.png) 0 5 0 5;
-}
-
-.button9 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(9button.png) 0 5 0 5;
-}
-
-.button10 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(10button.png) 0 5 0 5;
-}
-
-.button11 {
-    position: absolute;
-    overflow: hidden;
-    top: 4px;
-    right: 5px;
-    margin: 0;
-    border-width: 0 5px;
-    padding: 0 3px;
-    width: 24px;
-    height: 34px;
-    line-height: 34px;
-    font-family: inherit;
-    font-size: 12px;
-    font-weight: bold;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    white-space: nowrap;
-    background: none;
-    -webkit-border-image: url(6button.png) 0 5 0 5;
-}
-
 
 .blueButton {
     border-width: 0 5px;
@@ -490,20 +236,22 @@ body > .dialog {
 }
 
 .dialog > fieldset > label {
-    position: left;
+    position: absolute;
     margin: 16px 0 0 6px;
-    font-size: 20px;
+    font-size: 14px;
     color: #999999;
+    width:	5em;
+    text-align:	left;
 }
 
-input:not(input[type|=radio]):not(input[type|=checkbox]) {
+input:not([type|=submit]):not([type|=radio]):not([type|=checkbox]) {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     width: 100%;
     margin: 8px 0 0 0;
-    padding: 6px 6px 6px 44px;
-    font-size: 16px;
+    padding: 6px 6px 6px 5em;
+    font-size: 14px;
     font-weight: normal;
 }
 
@@ -525,7 +273,6 @@ body > .panel {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border: 1px solid #999999;
-    text-align: right;
     font-size: 16px;
 }
 
@@ -536,7 +283,6 @@ body > .panel {
     border-bottom: 1px solid #999999;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    text-align: right;
 }
 
 .panel > ul li:last-child,
@@ -544,7 +290,7 @@ fieldset > .row:last-child {
     border-bottom: none !important;
 }
 
-.row > input:not(input[type|=radio]):not(input[type|=checkbox]) {
+.row > input:not([type|=radio]):not([type|=checkbox]) {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -554,14 +300,28 @@ fieldset > .row:last-child {
     height: 42px;
     background: none;
 }
-.row > input[type|=radio], .row > input[type|=checkbox] {
+
+.row > input[type|=radio], .row > input[type|=checkbox], 
+.row > select {
+  float: right;
   margin: 7px 7px 0 0;
   height: 25px;
   width: 25px;
 }
 
+.panel input[type|=submit] {
+    width: 100%
+}
+
+.row > select {
+  width: auto;
+  margin: 9px 7px 0 0;
+}
+
 .row > label {
     position: absolute;
+    top:    0;
+    left:   0;
     margin: 0 0 0 14px;
     line-height: 42px;
     font-weight: bold;
