@@ -107,6 +107,12 @@ $result = mysqli_query($connection, "SELECT id, item, category FROM items ORDER 
 echo "<br>";
 echo "<fieldset>";
 echo "<br>";
+echo "<div id=\"index\" title=\"Index\" selected=\"true\">";
+echo "Hello World"
+echo "</div>";
+	    
+	    
+	    
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))	
 {
   echo "<div class=\"row\">";
