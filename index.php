@@ -114,8 +114,8 @@ echo "<br>";
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))	
 {
   echo "<div class=\"row\">";
-	echo "$line[item]";
-  //echo "<a class=\"button$line[category]\" href=\"index.php?remove=$line[id]\"></a>";
+	echo "<b>$line[item]</b> ";
+        echo "<a class=\"button$line[category]\" href=\"index.php?remove=$line[id]\"></a>";
 	echo "</div>";
 }
 echo "<br>";
