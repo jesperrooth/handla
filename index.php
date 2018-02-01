@@ -104,13 +104,8 @@ if ( $remove != "" ) {
 
 $result = mysqli_query($connection, "SELECT id, item, category FROM items ORDER BY category");
 	    
-echo "<br>";
-echo "<fieldset>";
-echo "<br>";
 
-	    
-	    
-	    
+echo "<fieldset>";	    
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))	
 {
   echo "<div class=\"row\">";
@@ -118,8 +113,7 @@ while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))
         echo "<a class=\"button$line[category]\" href=\"index.php?remove=$line[id]\"></a>";
 	echo "</div>";
 }
-echo "<br>";
-	    echo "</fieldset>";
+echo "</fieldset>";
 
 // Free resultset
 mysqli_free_result($result);
