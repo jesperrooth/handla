@@ -116,7 +116,7 @@ while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))
   }
 echo "</fieldset>";
 
-	    
+$result = mysqli_query($connection, "SELECT id, item, category FROM items ORDER BY category");	    
 	    
 echo "<fieldset>";
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))	
