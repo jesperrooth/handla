@@ -37,10 +37,10 @@
 		<option value="1">Grönt</option>
 		<option value="2">Bröd</option>
 		<option value="3">Kött</option>
-		<option value="4" selected>Ost</option>
+		<option value="4">Ost</option>
 		<option value="5">Kryddor</option>
 		<option value="6">Ris och pasta</option>
-		<option value="7">Mejeri</option>
+		<option value="7" selected>Mejeri</option>
 		<option value="8">Fryst</option>
 		<option value="9">Hushåll</option>
 		<option value="10">Övrigt</option>
