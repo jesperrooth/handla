@@ -107,7 +107,7 @@ $result = mysqli_query($connection, "SELECT id, item, category FROM items ORDER 
 echo "<fieldset>";	    
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))	
 {
-  if ( $category != "11" ) {
+  if ( $line[category] != "11" ) {
   echo "<div class=\"row\">";
 	echo "<label>$line[item]</label> ";
         echo "<a class=\"button$line[category]\" href=\"index.php?remove=$line[id]\"></a>";
@@ -121,7 +121,7 @@ $result = mysqli_query($connection, "SELECT id, item, category FROM items ORDER 
 echo "<fieldset>";
 while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC))	
 {
-  if ( $category == "11" ) {
+  if ( $line[category] == "11" ) {
 	echo "<div class=\"row\">";
 	echo "<label>$line[item]</label> ";
         echo "<a class=\"button$line[category]\" href=\"index.php?remove=$line[id]\"></a>";
